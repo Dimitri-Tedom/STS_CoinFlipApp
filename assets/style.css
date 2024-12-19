@@ -1,0 +1,81 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, rgb(242,112,156),rgb(255,148,114));
+    font-size: 10px;
+}
+
+.container{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button{
+    padding: 1.6rem;
+    background-color: skyblue;
+}
+
+/* Pour les 2 cotes de la piece, on doit s'assurer que leurs divs on les meme mensuration hauteur et largeur */
+
+#coin{
+    position: relative;
+    width: 16rem;
+    height: 16rem;
+    margin: 2rem 0rem;
+}
+
+#coin div{
+    width: 100%;
+    height: 100%;
+    border: 2px solid black;
+    border-radius: 50%;
+    background-size: cover;
+    backface-visibility: hidden;
+    position: absolute;
+}
+.animate-heads{
+    animation: flipHeads 3s;
+    animation-fill-mode: forwards;
+}
+@keyframes flipHeads {
+    from{
+        transform: rotateY(0deg);
+    }
+
+    to{
+        transform: rotateY(180deg);
+    }
+}
+.headsClass{
+    background-image:url("./Face.jpg");
+}
+
+.tailsClass {
+    background-image: url("./Plie2.jpg");
+    transform: rotateY(1800deg);
+}
+
+.animate-tails {
+    animation: fliptails 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fliptails {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(1620deg);
+    }
+}
