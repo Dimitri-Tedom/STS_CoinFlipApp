@@ -9,9 +9,11 @@ body {
     color: #fff;
     font-family: 'Arial', sans-serif;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     height: 100vh;
+    flex-direction: column;
+    align-items: center;
 }
 
 .casino-container {
@@ -119,4 +121,39 @@ input {
     margin-top: 10px;
     border: 1px solid gold;
     border-radius: 5px;
+}
+/* Section des icônes sociales */
+.social-icons {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-icon {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.8rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+/* Couleurs spécifiques pour chaque plateforme */
+.social-icon.linkedin {
+    color: #0077b5;
+}
+
+.social-icon.whatsapp {
+    color: #25d366;
+}
+
+.social-icon.twitter {
+    color: #1da1f2;
+}
+
+.social-icon.gmail {
+    color: #ea4335;
 }
