@@ -66,4 +66,12 @@ Feel free to fork this repository and make your own improvements. Pull requests 
 
 ---
 
+## **📬 Contact**
+
+For any questions or suggestions, feel free to reach out at:  
+📧 wilfried.tedom@facsciences-uy1.cm  
+🔗 [GitHub Profile](https://github.com/tedom-tafotsi-dimitri-wilfried)
+
+--- 
+
 Enjoy flipping coins and testing your luck in this simple yet engaging game! 🎲
