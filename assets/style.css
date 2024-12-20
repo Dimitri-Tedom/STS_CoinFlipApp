@@ -76,11 +76,11 @@ button:hover {
 
 .headsClass {
     background-image: url("./Pile.jpg");
+    transform: rotateY(-180deg);
 }
 
 .tailsClass {
     background-image: url("./Face.jpg");
-    transform: rotateY(-180deg);
 }
 
 .animate-heads {
