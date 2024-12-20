@@ -1,76 +1,109 @@
-*{
-    padding: 0;
+* {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
+    background: radial-gradient(circle, #1e1e1e, #111);
+    color: #fff;
+    font-family: 'Arial', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background: linear-gradient(to right, rgb(242,112,156),rgb(255,148,114));
-    font-size: 10px;
+    height: 100vh;
 }
 
-.container{
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.casino-container {
+    text-align: center;
+    padding: 20px;
+    border: 2px solid gold;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px 5px gold;
 }
 
-button{
-    padding: 1.6rem;
-    background-color: skyblue;
+h1 {
+    margin-bottom: 20px;
+    color: gold;
 }
 
-/* Pour les 2 cotes de la piece, on doit s'assurer que leurs divs on les meme mensuration hauteur et largeur */
+button {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    margin: 20px 0;
+    background: linear-gradient(to right, #ff9800, #f44336);
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
 
-#coin{
+button:hover {
+    transform: scale(1.1);
+    background: linear-gradient(to right, #f44336, #ff9800);
+}
+
+.scoreboard,
+.betting-section {
+    margin-top: 20px;
+}
+
+.scoreboard p,
+.betting-section p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+#coin {
     position: relative;
-    width: 16rem;
-    height: 16rem;
-    margin: 2rem 0rem;
+    width: 150px;
+    height: 150px;
+    margin: 20px auto;
+    transform-style: preserve-3d;
 }
 
-#coin div{
+#coin div {
     width: 100%;
     height: 100%;
-    border: 2px solid black;
     border-radius: 50%;
-    background-size: cover;
-    backface-visibility: hidden;
     position: absolute;
+    backface-visibility: hidden;
+    background-size: cover;
+    border: 2px solid gold;
 }
-.animate-heads{
-    animation: flipHeads 3s;
-    animation-fill-mode: forwards;
-}
-@keyframes flipHeads {
-    from{
-        transform: rotateY(0deg);
-    }
 
-    to{
-        transform: rotateY(180deg);
-    }
-}
-.headsClass{
-    background-image:url("./Face.jpg");
+.headsClass {
+    background-image: url("./Pile.jpg");
 }
 
 .tailsClass {
-    background-image: url("./Plie2.jpg");
-    transform: rotateY(1800deg);
+    background-image: url("./Face.jpg");
+    transform: rotateY(-180deg);
 }
 
-.animate-tails {
-    animation: fliptails 3s;
+.animate-heads {
+    animation: flipHeads 3s ease-in-out;
     animation-fill-mode: forwards;
 }
 
-@keyframes fliptails {
+.animate-tails {
+    animation: flipTails 3s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes flipHeads {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(1800deg);
+    }
+}
+
+@keyframes flipTails {
     from {
         transform: rotateY(0deg);
     }
@@ -78,4 +111,12 @@ button{
     to {
         transform: rotateY(1620deg);
     }
+}
+
+input {
+    padding: 10px;
+    font-size: 1rem;
+    margin-top: 10px;
+    border: 1px solid gold;
+    border-radius: 5px;
 }

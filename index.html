@@ -1,30 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/style.css">
-    <title>STS_CoinFlipApp</title>
+    <title>Casino Coin Flip</title>
 
-    <meta property="og:title" content="HTML,CSS,JS Template Project">
-    <meta property="og:description" content="Write your website's description here">
-    <meta property="og:url" content=" Ici ajouter l'url de votre page par exemple : https://dimitri-tedom/github.io/STS_KeyCodeApp">
-    <meta property="og:image" content="https://dimitri-tedom.github.io/STS_KeyCodeApp/assets/preview.svg">
+    <meta property="og:title" content="Casino Coin Flip Game">
+    <meta property="og:description" content="Testez votre chance avec un lancer de pièce au casino !">
+    <meta property="og:image" content="./assets/casino-preview.png">
     <meta property="og:type" content="website">
-    <meta property="site_name" content="STS_Template">
+    <meta property="og:site_name" content="Casino Coin Flip">
 </head>
+
 <body>
-    <div class="container">
+    <div class="casino-container">
+        <h1>🎲 STS Coin Flip 🎰</h1>
         <div id="coin" class="">
             <div id="heads" class="headsClass"></div>
             <div id="tails" class="tailsClass"></div>
         </div>
 
-        <button id="flip">Flip the coin</button>
-        <p>Heads: <span id="headCount"> 0 </span>  Tails: <span id="tailCount"> 0 </span></p>
+        <button id="flip">🎲 Lancer la pièce</button>
+        <div class="scoreboard">
+            <p>🪙 Pile : <span id="headCount">0</span></p>
+            <p>🪙 Face : <span id="tailCount">0</span></p>
+        </div>
 
-        <p> <span id="status"></span></p>
+        <div class="betting-section">
+            <label for="bet">💰 Mise : </label>
+            <input type="number" id="bet" placeholder="Mettez vos jetons" min="1" step="1">
+            <p>Résultat : <span id="status"></span></p>
+        </div>
     </div>
+    <audio id="coinSound" src="./assets/coin-flip.wav"></audio>
     <script src="./assets/script.js"></script>
 </body>
+
 </html>
